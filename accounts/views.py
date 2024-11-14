@@ -105,6 +105,10 @@ def signup_view(request):
         form = SignUpForm()
     return render(request, 'accounts/register.html', {'form': form})
 
+def dashboard_pelanggan(request):
+    # Your logic to handle the pelanggan dashboard
+    return render(request, 'accounts/dashboard_pelanggan.html')
+
 # Logout View
 def logout_view(request):
     logout(request)
