@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Pelanggan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For icons -->
+    <style>
+        /* Sample styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #444;
+            padding-left: 10px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .profile {
+            margin-bottom: 30px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .profile-info {
+            margin-top: 10px;
+        }
+        .profile-info p {
+            margin: 5px 0;
+        }
+        .info-boxes {
+            display: flex;
+            gap: 20px;
+        }
+        .info-box {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+        }
+        .info-box h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{% url 'dashboard_pelanggan' %}">Dashboard</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Profil</a>
+            <a href="#">Pesanan Saya</a>
+            <a href="#">Pembayaran</a>
+            <a href="#">Pengaturan Akun</a>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content">
+            <h2>Selamat datang, {{ user.username }}!</h2>
+
+            <!-- Profile Section -->
+            <div class="profile">
+                <img src="{{ user.profile_picture.url }}" alt="Profile Picture">
+                <div class="profile-info">
+                    <p><strong>Nama:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Alamat:</strong> {{ user.profile.alamat }}</p> <!-- Assuming the user model has a related profile model -->
+                </div>
+            </div>
+
+            <!-- Information Boxes -->
+            <div class="info-boxes">
+                <div class="info-box">
+                    <h3>Pesanan Aktif</h3>
+                    <p>5</p> <!-- Replace with dynamic data -->
+                </div>
+                <div class="info-box">
+                    <h3>Saldo Akun</h3>
+                    <p>IDR 2,500,000</p> <!-- Replace with dynamic data -->
+                </div>
+                <div class="info-box">
+                    <h3>Poin Loyalitas</h3>
+                    <p>1200</p> <!-- Replace with dynamic data -->
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div>
+                <h3>Pesanan Terbaru</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No. Pesanan</th>
+                            <th>Tanggal</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#12345</td>
+                            <td>01-12-2024</td>
+                            <td>Proses</td>
+                        </tr>
+                        <tr>
+                            <td>#12346</td>
+                            <td>30-11-2024</td>
+                            <td>Selesai</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
