@@ -5,6 +5,7 @@ from .views import CustomPasswordResetView, CustomPasswordResetConfirmView
 
 urlpatterns = [
     # Accounts 
+    path('', views.login_view, name='home'),
     path('login/', views.login_view, name='login'),
     path('register/', views.signup_view, name='register'),
     path('logout/', views.logout_view, name='logout'),
