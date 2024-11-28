@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth import views as auth_views
 from .views import CustomPasswordResetView, CustomPasswordResetConfirmView
 
+
 urlpatterns = [
     # Accounts 
     path('', views.login_view, name='home'),
@@ -17,3 +18,5 @@ urlpatterns = [
     path('accounts/password/reset/confirm/<uidb64>/<token>/', CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('accounts/password/reset/complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]
+
+
