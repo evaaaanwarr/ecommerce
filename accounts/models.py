@@ -63,4 +63,6 @@ class ShoppingCart:
         
     def calculate_total(self):
         return sum(product.price for product in self.items)
+    
+
 

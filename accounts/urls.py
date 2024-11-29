@@ -11,6 +11,8 @@ urlpatterns = [
     path('register/', views.signup_view, name='register'),
     path('logout/', views.logout_view, name='logout'),
     path('dashboard_pelanggan/', views.dashboard_pelanggan, name='dashboard_pelanggan'),
+    path('shop/', views.shop, name='shop'),
+  
 
     # Reset Password
     path('accounts/password/reset/', CustomPasswordResetView.as_view(), name='password_reset'),

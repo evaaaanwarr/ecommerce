@@ -113,3 +113,15 @@ def dashboard_pelanggan(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def home(request):
+    # Your logic to handle the pelanggan dashboard
+    return render(request, 'accounts/home.html')
+
+def shop(request):
+    # Your logic to handle the pelanggan dashboard
+    return render(request, 'accounts/shop.html')
+
+def contact(request):
+    # Your logic to handle the pelanggan dashboard
+    return render(request, 'accounts/contact.html')

@@ -3,166 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Pelanggan</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- For icons -->
+    <title>Aldi Motor - Produk dan Transaksi</title>
     <style>
-        /* Sample styling for layout */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
         }
-        .navbar {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-        }
-        .navbar a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            text-decoration: underline;
+        h1, h2 {
+            text-align: center;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            color: white;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
             padding: 20px;
-            min-height: 100vh;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #0033cc;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .category {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .category h3 {
             margin-bottom: 10px;
         }
-        .sidebar a:hover {
-            background-color: #444;
-            padding-left: 10px;
-        }
-        .content {
-            flex: 1;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-left: 20px;
-        }
-        .content h2 {
-            margin-top: 0;
-        }
-        .profile {
-            margin-bottom: 30px;
-        }
-        .profile img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-        }
-        .profile-info {
-            margin-top: 10px;
-        }
-        .profile-info p {
-            margin: 5px 0;
-        }
-        .info-boxes {
-            display: flex;
-            gap: 20px;
-        }
-        .info-box {
-            background-color: #f7f7f7;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            flex: 1;
-        }
-        .info-box h3 {
-            margin-top: 0;
-        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.category {
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    flex: 1 1 calc(33.333% - 20px); /* Membagi lebar menjadi tiga kolom */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f6f9; /* Warna pastel lembut */
+    color: #333;
+}
+
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f5f7; /* Warna abu pastel */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title */
+h2 {
+    text-align: center;
+    color: #4CAF50; /* Hijau segar */
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Container */
+.checkout-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #ffffff; /* Warna putih untuk form */
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 
+}
+
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="{% url 'dashboard_pelanggan' %}">Dashboard</a>
-        <a href="{% url 'logout' %}">Logout</a>
-    </div>
-
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h3>Menu</h3>
-            <a href="#">Profil</a>
-            <a href="#">Pesanan Saya</a>
-            <a href="#">Pembayaran</a>
-            <a href="#">Pengaturan Akun</a>
+        <h1>Aldi Motor</h1>
+
+        <h2>Tambah Produk</h2>
+        <form id="productForm">
+            <input type="text" id="productId" placeholder="ID Produk" required>
+            <input type="text" id="productName" placeholder="Nama Produk" required>
+            <textarea id="productDescription" placeholder="Deskripsi Produk" required></textarea>
+            <input type="number" id="productPrice" placeholder="Harga Produk" required>
+            <input type="number" id="productStock" placeholder="Kuantitas Stok" required>
+            <input type="submit" value="Tambah Produk">
+        </form>
+
+        <h2>Produk Kategori</h2>
+
+        <div class="category">
+            <h3>Kategori 1: Aksesoris</h3>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="" alt="Aksesoris Motor">
+                    <strong>Produk 1</strong>
+                    <p>Deskripsi: Aksesoris Motor</p>
+                    <p>Harga: Rp 100.000</p>
+                    <p>Stok: 10</p>
         </div>
-
-        <!-- Content Area -->
-        <div class="content">
-            <h2>Selamat datang, {{ user.username }}!</h2>
-
-            <!-- Profile Section -->
-            <div class="profile">
-                <img src="{{ user.profile_picture.url }}" alt="Profile Picture">
-                <div class="profile-info">
-                    <p><strong>Nama:</strong> {{ user.first_name }} {{ user.last_name }}</p>
-                    <p><strong>Email:</strong> {{ user.email }}</p>
-                    <p><strong>Alamat:</strong> {{ user.profile.alamat }}</p> <!-- Assuming the user model has a related profile model -->
-                </div>
-            </div>
-
-            <!-- Information Boxes -->
-            <div class="info-boxes">
-                <div class="info-box">
-                    <h3>Pesanan Aktif</h3>
-                    <p>5</p> <!-- Replace with dynamic data -->
-                </div>
-                <div class="info-box">
-                    <h3>Saldo Akun</h3>
-                    <p>IDR 2,500,000</p> <!-- Replace with dynamic data -->
-                </div>
-                <div class="info-box">
-                    <h3>Poin Loyalitas</h3>
-                    <p>1200</p> <!-- Replace with dynamic data -->
-                </div>
-            </div>
-
-            <!-- Recent Orders Section -->
-            <div>
-                <h3>Pesanan Terbaru</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>No. Pesanan</th>
-                            <th>Tanggal</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>#12345</td>
-                            <td>01-12-2024</td>
-                            <td>Proses</td>
-                        </tr>
-                        <tr>
-                            <td>#12346</td>
-                            <td>30-11-2024</td>
-                            <td>Selesai</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div class="product">
+            <img src="path/to/2.png" alt="Helm Motor">
+            <strong>Produk 2</strong>
+            <p>Deskripsi: Helm Motor</p>
+            <p>Harga: Rp 250.000</p>
+            <p>Stok: 5</p>
+        </div>
+        <div class="product">
+            <img src="path/to/image3.jpg" alt="Gambar Produk Lain">
+            <strong>Produk 3</strong>
+            <p>Deskripsi: Produk lainnya</p>
+            <p>Harga: Rp 150.000</p>
+            <p>Stok: 7</p>
         </div>
     </div>
+</div>
 
+<div class="category">
+    <h3>Kategori 2: Sparepart</h3>
+    <div class="product-grid">
+        <div class="product">
+            <img src="path/to/image4.jpg" alt="Oli Motor">
+            <strong>Produk 4</strong>
+            <p>Deskripsi: Oli Motor</p>
+            <p>Harga: Rp 50.000</p>
+            <p>Stok: 20</p>
+        </div>
+        <div class="product">
+            <img src="path/to/image5.jpg" alt="Ban Motor">
+            <strong>Produk 5</strong>
+            <p>Deskripsi: Ban Motor</p>
+            <p>Harga: Rp 300.000</p>
+            <p>Stok: 8</p>
+        </div>
+        <div class="product">
+            <img src="path/to/image6.jpg" alt="Sparepart Motor">
+            <strong>Produk 6</strong>
+            <p>Deskripsi: Sparepart Motor</p>
+            <p>Harga: Rp 200.000</p>
+            <p>Stok: 6</p>
+        </div>
+    </div>
+</div>
+
+
+<h2>CheckOut</h2>
+<div class="checkout-container">
+    <form id="checkoutForm">
+        <div class="form-group">
+            <label for="customerName">Nama Pelanggan</label>
+            <input type="text" id="customerName" placeholder="Masukkan Nama Pelanggan" required>
+        </div>
+        <div class="form-group">
+            <label for="customerEmail">Email Pelanggan</label>
+            <input type="email" id="customerEmail" placeholder="Masukkan Email Pelanggan" required>
+        </div>
+        <div class="form-group">
+            <label for="customerPhone">Telepon Pelanggan</label>
+            <input type="text" id="customerPhone" placeholder="Masukkan Telepon Pelanggan" required>
+        </div>
+        <div class="form-group">
+            <label for="customerAddress">Alamat Pelanggan</label>
+            <textarea id="customerAddress" placeholder="Masukkan Alamat Pelanggan" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Lanjutkan Pembayaran</button>
+    </form>
+</div>
+
+
+    <script>
+        // JavaScript untuk menangani form submission dapat ditambahkan di sini
+        document.getElementById('productForm').onsubmit = function(event) {
+            event.preventDefault();
+            // Logika untuk menambah produk
+            const productId = document.getElementById('productId').value;
+            const productName = document.getElementById('productName').value;
+            const productDescription = document.getElementById('productDescription').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const productStock = document.getElementById('productStock').value;
+
+            console.log(`Produk Ditambahkan: ${productId}, ${productName}, ${productDescription}, ${productPrice}, ${productStock}`);
+            // Reset form
+            this.reset();
+        };
+
+        document.getElementById('customerForm').onsubmit = function(event) {
+            event.preventDefault();
+            // Logika untuk menambah pelanggan
+            const customerId = document.getElementById('customerId').value;
+            const customerName = document.getElementById('customerName').value;
+            const customerEmail = document.getElementById('customerEmail').value;
+            const customerPhone = document.getElementById('customerPhone').value;
+            const customerAddress = document.getElementById('customerAddress').value;
+
+            console.log(`Pelanggan Ditambahkan: ${customerId}, ${customerName}, ${customerEmail}, ${customerPhone}, ${customerAddress}`);
+            // Reset form
+            this.reset();
+        };
+
+        document.getElementById('transactionForm').onsubmit = function(event) {
+            event.preventDefault();
+            // Logika untuk menyelesaikan transaksi
+            const transactionId = document.getElementById('transactionId').value;
+            const transactionCustomerId = document.getElementById('transactionCustomerId').value;
+            const transactionProducts = document.getElementById('transactionProducts').value;
+            const transactionTotal = document.getElementById('transactionTotal').value;
+
+            console.log(`Transaksi Selesai: ${transactionId}, ${transactionCustomerId}, ${transactionProducts}, ${transactionTotal}`);
+            // Reset form
+            this.reset();
+        };
+    </script>
 </body>
-</html>
+</html> 
