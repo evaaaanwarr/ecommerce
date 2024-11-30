@@ -15,4 +15,7 @@
 ## Gambar Dashboard Pelanggan
 ![Gambar](https://github.com/evaaaanwarr/ecommerce/blob/main/ss/Tambah%20Produk.png)
 
+## Gambar Dashboard Pelanggan
+![Gambar](https://github.com/evaaaanwarr/ecommerce/blob/main/ss/Konfirmasi%20Pembayaran.png)
+
 
