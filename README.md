@@ -1,6 +1,6 @@
 # ecommerce
 
-### Eva Amalia ANwar 220907502089
+### Eva Amalia Anwar 220907502089
 ### Afni Kaulan Sadida 220907502091
 ### Ilfa El Zahra 220907500014
 ### Arsika Marwah D Tantja 220907502086
