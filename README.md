@@ -13,5 +13,4 @@
 ![Gambar](https://github.com/evaaaanwarr/ecommerce/blob/main/ss/login_.jpg)
 
 ## Gambar Dashboard Pelanggan
-![Gambar](https://github.com/evaaaanwarr/ecommerce/blob/main/ss/dashboard_pelanggan.jpg)
-
+![Gambar](https://github.com/evaaaanwarr/ecommerce/blob/main/ss/Tambah%20Produk.png)
