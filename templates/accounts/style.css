@@ -1,0 +1,48 @@
+/* css/style.css */
+
+/* Reset margin dan padding default */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  /* Atur body */
+  body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f9;
+	color: #333;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* Header */
+  header {
+	background: #333;
+	color: #fff;
+	padding: 1rem 0;
+	text-align: center;
+  }
+  
+  /* Container */
+  .container {
+	width: 90%;
+	margin: auto;
+	max-width: 1200px;
+	padding: 20px;
+  }
+  
+  /* Tombol */
+  button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #555;
+  }
+  
