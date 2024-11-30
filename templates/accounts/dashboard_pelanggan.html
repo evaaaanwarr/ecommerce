@@ -241,63 +241,68 @@ h2 {
             <input type="submit" value="Tambah Produk">
         </form>
 
-        <h2>Produk Kategori</h2>
-
-        <div class="category">
-            <h3>Kategori 1: Aksesoris</h3>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="{% static 'images/oli-2.jpg' %}" alt="Aksesoris Motor">
-                    <strong>Produk 1</strong>
-                    <p>Deskripsi: Aksesoris Motor</p>
-                    <p>Harga: Rp 100.000</p>
-                    <p>Stok: 10</p>
+        {% block content %}
+        <div class="product-container">
+            <h2>Produk Kategori</h2>
+        
+            <!-- Kategori 1 -->
+            <div class="category">
+                <h3>Kategori 1: OLI</h3>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/oli-2.png" alt="Aksesoris Motor">
+                        <strong>Produk 1</strong>
+                        <p>Deskripsi: Aksesoris Motor</p>
+                        <p>Harga: Rp 100.000</p>
+                        <p>Stok: 10</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/helm.jpg" alt="Helm Motor">
+                        <strong>Produk 2</strong>
+                        <p>Deskripsi: Helm Motor</p>
+                        <p>Harga: Rp 250.000</p>
+                        <p>Stok: 5</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/oli-2.1.jpg" alt="Produk Lainnya">
+                        <strong>Produk 3</strong>
+                        <p>Deskripsi: Produk Lainnya</p>
+                        <p>Harga: Rp 150.000</p>
+                        <p>Stok: 7</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Kategori 2 -->
+            <div class="category">
+                <h3>Kategori 2: Sparepart</h3>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/oli-2.png" alt="Oli Motor">
+                        <strong>Produk 4</strong>
+                        <p>Deskripsi: Oli Motor</p>
+                        <p>Harga: Rp 50.000</p>
+                        <p>Stok: 20</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/ban.jpg" alt="Ban Motor">
+                        <strong>Produk 5</strong>
+                        <p>Deskripsi: Ban Motor</p>
+                        <p>Harga: Rp 300.000</p>
+                        <p>Stok: 8</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/sparepart.jpg" alt="Sparepart Motor">
+                        <strong>Produk 6</strong>
+                        <p>Deskripsi: Sparepart Motor</p>
+                        <p>Harga: Rp 200.000</p>
+                        <p>Stok: 6</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="product">
-            <img src="i" alt="Helm Motor">
-            <strong>Produk 2</strong>
-            <p>Deskripsi: Helm Motor</p>
-            <p>Harga: Rp 250.000</p>
-            <p>Stok: 5</p>
-        </div>
-        <div class="product">
-            <img src="images/oli-2.1.jpg" alt="Gambar Produk Lain">
-            <strong>Produk 3</strong>
-            <p>Deskripsi: Produk lainnya</p>
-            <p>Harga: Rp 150.000</p>
-            <p>Stok: 7</p>
-        </div>
-    </div>
-</div>
-
-<div class="category">
-    <h3>Kategori 2: Sparepart</h3>
-    <div class="product-grid">
-        <div class="product">
-            <img src="path/to/image4.jpg" alt="Oli Motor">
-            <strong>Produk 4</strong>
-            <p>Deskripsi: Oli Motor</p>
-            <p>Harga: Rp 50.000</p>
-            <p>Stok: 20</p>
-        </div>
-        <div class="product">
-            <img src="path/to/image5.jpg" alt="Ban Motor">
-            <strong>Produk 5</strong>
-            <p>Deskripsi: Ban Motor</p>
-            <p>Harga: Rp 300.000</p>
-            <p>Stok: 8</p>
-        </div>
-        <div class="product">
-            <img src="path/to/image6.jpg" alt="Sparepart Motor">
-            <strong>Produk 6</strong>
-            <p>Deskripsi: Sparepart Motor</p>
-            <p>Harga: Rp 200.000</p>
-            <p>Stok: 6</p>
-        </div>
-    </div>
-</div>
-
-
+        {% endblock %}
+        
 <h2>CheckOut</h2>
 <div class="checkout-container">
     <form id="checkoutForm">
